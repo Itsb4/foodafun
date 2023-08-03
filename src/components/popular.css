@@ -1,0 +1,13 @@
+p {
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 40%;
+}
+
+.card {
+	min-height: 25rem;
+}
+
+.wrapper {
+	margin: 4rem 0rem;
+}
