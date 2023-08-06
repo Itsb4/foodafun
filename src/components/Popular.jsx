@@ -34,7 +34,7 @@ export default function Popular() {
 				<h3 className="text-xl">Popular Picks</h3>
 				<Splide
 					options={{
-						perPage: 4,
+						perPage: 3,
 						arrows: false,
 						pagination: false,
 						drag: "free",
@@ -44,14 +44,14 @@ export default function Popular() {
 					{popular.map((recipe) => (
 						<SplideSlide key={recipe.id}>
 							<div
-								className="card rounded-lg overflow-hidden relative"
+								className="card rounded-xl overflow-hidden relative"
 								key={recipe.id}
 							>
-								<p className="absolute z-10 bottom-1.5 text-white w-full text-center font-semibold text-base flex justify-center items-center">
+								<p className="absolute z-10 w-full bottom-10 text-white text-center font-semibold text-base flex justify-center items-center">
 									{recipe.title}
 								</p>
 								<img
-									className="rounded-lg absolute left-0 w-screen h-screen object-cover"
+									className="rounded-xl absolute left-0 w-screen h-fit object-cover"
 									src={recipe.image}
 									alt={recipe.title}
 								/>
