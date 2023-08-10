@@ -1,0 +1,12 @@
+.wrapper {
+	margin: 0;
+}
+
+.link {
+	font-family: "Lobster Two", cursive;
+	display: flex;
+}
+
+.svg {
+	font-size: 2rem;
+}
