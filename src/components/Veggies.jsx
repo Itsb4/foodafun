@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "./popular.css";
-import { Link } from "react-router-dom";
 
 export default function Veggies() {
 	const [veggie, setVeggie] = useState([]);
@@ -14,7 +13,7 @@ export default function Veggies() {
 	const fetchVeggieRecipes = async () => {
 		const check = localStorage.getItem("veggie");
 
-		if (check !== "undefined") {
+		if (check) {
 			setVeggie(JSON.parse(check));
 		} else {
 			const response = await fetch(
@@ -24,7 +23,7 @@ export default function Veggies() {
 			);
 			const data = await response.json();
 			localStorage.setItem("veggie", JSON.stringify(data.recipes));
-			console.log(data);
+			// console.log(data);
 			setVeggie(data.recipes);
 		}
 	};
@@ -48,16 +47,14 @@ export default function Veggies() {
 								className="card rounded-xl overflow-hidden relative"
 								key={recipe.id}
 							>
-								<Link to={`/recipe/${recipe.id}`}>
-									<p className="absolute z-10 w-full bottom-10 drop-shadow-lg shadow-black text-white text-center font-semibold text-base flex justify-center items-center">
-										{recipe.title}
-									</p>
-									<img
-										className="bg-transparent rounded-xl absolute left-0 w-screen h-fit object-cover"
-										src={recipe.image}
-										alt={recipe.title}
-									/>
-								</Link>
+								<p className="absolute z-10 w-full bottom-10 drop-shadow-lg shadow-black text-white text-center font-semibold text-base flex justify-center items-center">
+									{recipe.title}
+								</p>
+								<img
+									className="bg-transparent rounded-xl absolute left-0 w-screen h-fit object-cover"
+									src={recipe.image}
+									alt={recipe.title}
+								/>
 							</div>
 						</SplideSlide>
 					))}

@@ -11,29 +11,3 @@ p {
 .wrapper {
 	margin: 4rem 0rem;
 }
-
-.slink {
-	background: linear-gradient(35deg, #494949, #313131);
-}
-
-.slink.active {
-	background: linear-gradient(to right, #f27121, #e94057);
-}
-
-.slink.active .svg {
-	color: white;
-}
-
-.slink.active h4 {
-	color: white;
-}
-
-.input-area input {
-	background: linear-gradient(35deg, #494949, #313131);
-	color: white;
-}
-
-.input-area .svg {
-	transform: translate(100%, -50%);
-	color: white;
-}
