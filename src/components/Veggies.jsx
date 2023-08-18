@@ -13,14 +13,15 @@ export default function Veggies() {
 
 	const fetchVeggieRecipes = async () => {
 		const check = localStorage.getItem("veggie");
+		// console.log(check);
 
-		if (check !== "undefined") {
+		if (check !== null) {
 			setVeggie(JSON.parse(check));
 		} else {
 			const response = await fetch(
 				`https://api.spoonacular.com/recipes/random?apiKey=${
 					import.meta.env.VITE_FOODIE_API_KEY
-				}&number=9&tag=vegetarian`
+				}&number=12&tag=vegetarian`
 			);
 			const data = await response.json();
 			localStorage.setItem("veggie", JSON.stringify(data.recipes));
@@ -30,9 +31,11 @@ export default function Veggies() {
 	};
 
 	return (
-		<div className="">
-			<div className="wrapper m-10">
-				<h3 className="text-xl">Trending Vegetarian Picks</h3>
+		<section>
+			<div className="wrapper mx-5 sm:m-10 flex flex-col justify-center sm:justify-normal text-center sm:text-left">
+				<h3 className="text-xl font-medium sm:font-normal">
+					Trending Vegetarian Picks
+				</h3>
 				<Splide
 					options={{
 						perPage: 3,
@@ -41,11 +44,12 @@ export default function Veggies() {
 						drag: "free",
 						gap: "4rem",
 					}}
+					className="flex sm:block justify-around"
 				>
 					{veggie.map((recipe) => (
-						<SplideSlide key={recipe.id}>
+						<SplideSlide key={recipe.id} className="mx-56 sm:mx-0">
 							<div
-								className="card rounded-xl overflow-hidden relative"
+								className="card w-80 sm:w-full rounded-xl overflow-hidden relative"
 								key={recipe.id}
 							>
 								<Link to={`/recipe/${recipe.id}`}>
@@ -53,7 +57,7 @@ export default function Veggies() {
 										{recipe.title}
 									</p>
 									<img
-										className="bg-transparent rounded-xl absolute left-0 w-screen h-fit object-cover"
+										className="bg-transparent rounded-xl absolute left-0 w-full h-full object-cover"
 										src={recipe.image}
 										alt={recipe.title}
 									/>
@@ -63,6 +67,6 @@ export default function Veggies() {
 					))}
 				</Splide>
 			</div>
-		</div>
+		</section>
 	);
 }

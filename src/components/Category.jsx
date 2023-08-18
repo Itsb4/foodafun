@@ -5,10 +5,10 @@ import "./popular.css";
 
 export default function Category() {
 	return (
-		<div className="flex m-8 justify-center">
+		<div className="flex my-8 justify-center">
 			<NavLink
 				className={
-					"slink flex flex-col justify-center items-center no-underline w-24 h-24 cursor-pointer mr-8 rounded-[50%] scale-[0.8]"
+					"slink flex flex-col justify-center items-center no-underline  h-24 w-24 cursor-pointer mx-0 sm:mx-4  rounded-[50%] scale-[0.8]"
 				}
 				to={"/cuisine/Italian"}
 			>
@@ -17,7 +17,7 @@ export default function Category() {
 			</NavLink>
 			<NavLink
 				className={
-					"slink flex flex-col justify-center items-center no-underline w-24 h-24 cursor-pointer mr-8 rounded-[50%] scale-[0.8]"
+					"slink flex flex-col justify-center items-center no-underline w-24 h-24 cursor-pointer mx-0 sm:mx-4 rounded-[50%] scale-[0.8]"
 				}
 				to={"/cuisine/American"}
 			>
@@ -26,7 +26,7 @@ export default function Category() {
 			</NavLink>
 			<NavLink
 				className={
-					"slink flex flex-col justify-center items-center no-underline w-24 h-24 cursor-pointer mr-8 rounded-[50%] scale-[0.8]"
+					"slink flex flex-col justify-center items-center no-underline w-24 h-24 cursor-pointer mx-0 sm:mx-4 rounded-[50%] scale-[0.8]"
 				}
 				to={"/cuisine/Thai"}
 			>
@@ -35,7 +35,7 @@ export default function Category() {
 			</NavLink>
 			<NavLink
 				className={
-					"slink flex flex-col justify-center items-center no-underline w-24 h-24 cursor-pointer mr-8 rounded-[50%] scale-[0.8]"
+					"slink flex flex-col justify-center items-center no-underline w-24 h-24 cursor-pointer mx-0 sm:mx-4 rounded-[50%] scale-[0.8]"
 				}
 				to={"/cuisine/Japanese"}
 			>

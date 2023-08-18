@@ -14,7 +14,7 @@ export default function Popular() {
 	const fetchPopularRecipes = async () => {
 		const check = localStorage.getItem("popular");
 
-		if (check !== "undefined") {
+		if (check !== null) {
 			setPopular(JSON.parse(check));
 		} else {
 			const response = await fetch(

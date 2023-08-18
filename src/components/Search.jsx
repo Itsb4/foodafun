@@ -13,9 +13,15 @@ export default function Search() {
 	};
 
 	return (
-		<form className="my-0 mx-80 " onSubmit={handleSubmit}>
-			<div className="input-area relative w-full">
-				<FaSearch className="svg absolute top-1/2 left-0 " />
+		<form
+			className="flex items-center justify-center"
+			onSubmit={handleSubmit}
+		>
+			<div className="input-area relative w-full sm:w-1/2">
+				<FaSearch
+					className="svg absolute top-1/2 left-0 "
+					onClick={handleSubmit}
+				/>
 				<input
 					type="text"
 					name="name"
