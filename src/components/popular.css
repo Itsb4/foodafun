@@ -8,6 +8,14 @@ p {
 	min-height: 15rem;
 }
 
+.recipe-title {
+	transform: translate(-50%, 0%);
+}
+
+.blur-text {
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
 .wrapper {
 	margin: 4rem 0rem;
 }

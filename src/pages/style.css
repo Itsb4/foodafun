@@ -1,6 +1,5 @@
-.info {
-	margin-left: 4rem;
-	width: 50%;
+.wrapper {
+	margin: 4rem 0rem;
 }
 
 .info button.active {
@@ -8,7 +7,7 @@
 	color: white;
 }
 
-.info > button {
+.info button {
 	padding: 1rem 2rem;
 	color: #313131;
 	background: white;
@@ -23,4 +22,12 @@
 
 .instructions h3 {
 	display: block;
+}
+
+@media (max-width: 760px) {
+	.info button {
+		width: 45%;
+		padding: 1rem;
+		margin-right: 1rem;
+	}
 }

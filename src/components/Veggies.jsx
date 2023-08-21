@@ -44,23 +44,23 @@ export default function Veggies() {
 						drag: "free",
 						gap: "4rem",
 					}}
-					className="flex sm:block justify-around"
 				>
 					{veggie.map((recipe) => (
-						<SplideSlide key={recipe.id} className="mx-56 sm:mx-0">
+						<SplideSlide key={recipe.id} className="mx-60 sm:mx-0">
 							<div
 								className="card w-80 sm:w-full rounded-xl overflow-hidden relative"
 								key={recipe.id}
 							>
 								<Link to={`/recipe/${recipe.id}`}>
-									<p className="absolute z-10 w-full bottom-10 drop-shadow-lg shadow-black text-white text-center font-semibold text-base flex justify-center items-center">
+									<p className="recipe-title absolute z-10 left-1/2 bottom-0 text-white w-full text-center font-semibold text-base h-2/5 flex justify-center items-center">
 										{recipe.title}
 									</p>
 									<img
-										className="bg-transparent rounded-xl absolute left-0 w-full h-full object-cover"
+										className="rounded-xl absolute left-0 w-full h-full object-cover"
 										src={recipe.image}
 										alt={recipe.title}
 									/>
+									<div className="z-[3] absolute w-full h-full blur-text"></div>
 								</Link>
 							</div>
 						</SplideSlide>
