@@ -15,7 +15,7 @@ export default function Veggies() {
 		const check = localStorage.getItem("veggie");
 		// console.log(check);
 
-		if (check !== null) {
+		if (check !== null && check !== "undefined") {
 			setVeggie(JSON.parse(check));
 		} else {
 			const response = await fetch(
