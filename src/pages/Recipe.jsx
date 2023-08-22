@@ -68,7 +68,7 @@ export default function Recipe() {
 								</button>
 							</div>
 							{activeTab === "instructions" && (
-								<section className="mt-8 instructions ">
+								<section className="mt-8 instructions">
 									<h3
 										className="text-2xl w-full lg:w-auto"
 										dangerouslySetInnerHTML={{
@@ -84,7 +84,7 @@ export default function Recipe() {
 								</section>
 							)}
 							{activeTab === "ingredients" && (
-								<ul className="mt-8">
+								<ul className="mt-8 ml-4">
 									{recipeDetails.extendedIngredients.map(
 										(ingredient) => (
 											<li
