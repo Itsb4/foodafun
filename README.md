@@ -26,7 +26,7 @@ With PNPM:
 
 ## Usage
 
-If you want to run this project locally, then you can use `git clone`.
+To run this project locally, you can use git clone
 
 ### Before using locally, you can try online here
 
@@ -35,7 +35,7 @@ If you want to run this project locally, then you can use `git clone`.
 ## For local usage :
 
 ```bash
-    $ git clone https://github.com/Itsb4/foodafun.git
+    $ git clone https://github.com/bhardwaj-shubham/foodafun.git
 ```
 
 ## Learn More
